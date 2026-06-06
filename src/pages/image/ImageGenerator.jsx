@@ -56,13 +56,7 @@ function ImageGenerator() {
                         />
                     ))
                 }
-                {/* {imageBase64 && (
-                    <img
-                        src={`data:image/png;base64,${imageBase64}`}
-                        alt="Generated"
-                        style={{ maxWidth: "100%" }}
-                    />
-                )} */}
+
             </div>
         </div>
     );

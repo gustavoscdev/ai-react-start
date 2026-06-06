@@ -3,6 +3,7 @@ import './App.css'
 import TalkWithAi from './pages/chat/TalkWithAi'
 import RecipeGenerator from './pages/recipe/RecipeGenerator'
 import ImageGenerator from './pages/image/ImageGenerator'
+import AudioTranscription from './pages/audio/AudioTranscription'
 
 function App() {
   const [activeTab, setActiveTab] = useState("ask-ai")
@@ -16,7 +17,7 @@ function App() {
     <>
       <div className="App">
         <button
-          className={activeTab == 'ask-ai' ? 'active' : ''} 
+          className={activeTab == 'ask-ai' ? 'active' : ''}
           onClick={() => handleTabChange("ask-ai")}>
           Talk with AI
         </button>
@@ -33,10 +34,17 @@ function App() {
           Image
         </button>
 
+        <button
+          className={activeTab == 'audio-ai' ? 'active' : ''}
+          onClick={() => handleTabChange("audio-ai")}>
+          Audio
+        </button>
+
         <div>
           {activeTab === "ask-ai" && <TalkWithAi />}
           {activeTab === "recipe-ai" && <RecipeGenerator />}
           {activeTab === "image-ai" && <ImageGenerator />}
+          {activeTab === "audio-ai" && <AudioTranscription />}
         </div>
       </div>
     </>
