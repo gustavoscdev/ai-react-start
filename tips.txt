@@ -1,0 +1,3 @@
+Subir projeto
+
+npm run dev
